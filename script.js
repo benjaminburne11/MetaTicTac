@@ -434,16 +434,19 @@ function checkBigGameWins() {
 function xWonBigGame() {
     alert("X's won")
     winnerOne = 1
+    localStorage.clear()
 }
 
 function oWonBigGame() {
     alert("O's won")
     winnerOne = 2
+    localStorage.clear()
 }
 
 function tiedBigGame() {
     alert("Tied Game")
     winnerOne = 3
+    localStorage.clear()
 }
 
 function loadPage() {
