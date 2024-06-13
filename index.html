@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <title>X's & O's</title>
 </head>
-<body>
+<body onload="loadPage()">
     <div id="main-Menu-Container">
         <div id="game-Title">MetaTicTac</div>
         <button id="play-Game" onclick="playGame()">Play</button>
+        <button id="continue-Game" onclick="continueGame()"><div style="width:100%;position:absolute;left:50%;transform: translate(-50%);">Continue Game...</div></button>
     </div>
     <div id="whole-Game-Container">
         <div id="turn-Indicator"></div>

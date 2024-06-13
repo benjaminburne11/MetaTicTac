@@ -1,7 +1,8 @@
 // Functions
 function openMiniXOsGame(id, index) {
 
-    if(bigGamePlacesTaken[index] == 0 && winnerOne == 0) {
+    console.log(bigGamePlacesTaken[index])
+    if(bigGamePlacesTaken[index] == "0" && winnerOne == 0) {
         document.getElementById(id).style.animation = "fullScreen 1s forwards 0s"
         document.getElementById("final-Game-Result-Holder").style.animation = "hideGameResults 1s forwards 0s"
     
@@ -42,13 +43,11 @@ function placeMarker(id, index) {
             
             if(playerOneTurn) {
                 placesTaken[index] = 1
-                console.log(index)
                 index = index + 1
                 document.getElementById(id).innerHTML = "<div class='x fullScreen game-"+currentGame+"'>+</div>"
                 playerOneTurn = false
             } else {
                 placesTaken[index] = 2
-                console.log(index)
                 index = index + 1
                 document.getElementById(id).innerHTML = "<div class='o fullScreen game-"+currentGame+"'></div>"
                 playerOneTurn = true
@@ -57,81 +56,119 @@ function placeMarker(id, index) {
             markersPlaced++
 
             if(placesTaken[0] == 1 && placesTaken[1] == 1 && placesTaken[2] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[0] == 1 && placesTaken[4] == 1 && placesTaken[8] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[2] == 1 && placesTaken[5] == 1 && placesTaken[8] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[2] == 2 && placesTaken[5] == 2 && placesTaken[8] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[0] == 1 && placesTaken[3] == 1 && placesTaken[6] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[1] == 1 && placesTaken[4] == 1 && placesTaken[7] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[2] == 1 && placesTaken[4] == 1 && placesTaken[6] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[3] == 1 && placesTaken[4] == 1 && placesTaken[5] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[3] == 1 && placesTaken[4] == 1 && placesTaken[5] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[6] == 1 && placesTaken[7] == 1 && placesTaken[8] == 1) {
-                setTimeout(function() {
+                setTimeout(function() {    
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
                     xWonGame()
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[0] == 2 && placesTaken[1] == 2 && placesTaken[2] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[0] == 2 && placesTaken[4] == 2 && placesTaken[8] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[0] == 2 && placesTaken[3] == 2 && placesTaken[6] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[1] == 2 && placesTaken[4] == 2 && placesTaken[7] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[2] == 2 && placesTaken[4] == 2 && placesTaken[6] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[3] == 2 && placesTaken[4] == 2 && placesTaken[5] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[3] == 2 && placesTaken[4] == 2 && placesTaken[5] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(placesTaken[6] == 2 && placesTaken[7] == 2 && placesTaken[8] == 2) {
                 setTimeout(function() {
-                    oWonGame()
+                    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
+                    oWonGame()    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             } else if(markersPlaced == 9) {
                 console.log("tied")
                 setTimeout(function() {
                     tiedGame()
+                    
+                    localStorage.setItem("board", bigGamePlacesTaken)
                 }, 500)
             }
         }else {
@@ -143,7 +180,6 @@ function placeMarker(id, index) {
 }
 
 function tiedGame() {
-    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
     document.getElementById("final-Game-Result-Holder").style.animation = "showGameResults 1s forwards 0s"
     
     var miniGames = document.querySelectorAll('.mini-Section-Open')
@@ -182,6 +218,7 @@ function tiedGame() {
 }
 
 function playGame() {
+    localStorage.clear()
     document.getElementById("whole-Game-Container").style.display = "flex"
     document.getElementById("whole-Game-Container").style.transition = ".5s"
     document.getElementById("main-Menu-Container").style.transition = ".5s"
@@ -192,11 +229,9 @@ function playGame() {
         document.getElementById("whole-Game-Container").style.display = "flex"
         document.getElementById("whole-Game-Container").style.opacity = "1"
     }, 500)
-
 }
 
 function xWonGame() {
-    document.getElementById(boxID).style.animation = "exitFullScreen 1s forwards 0s"
     document.getElementById("final-Game-Result-Holder").style.animation = "showGameResults 1s forwards 0s"
 
     var miniGames = document.querySelectorAll('.mini-Section-Open')
@@ -229,19 +264,19 @@ function xWonGame() {
 
     for(var i=0;i<Xs.length;i++) {
         Xs[i].classList.remove("fullScreen")
-        console.log(Xs[i])
     }
 
     document.getElementById("game-Result-"+currentGame).innerHTML = '<div class="x-Main">+</div>'
     
     bigGamePlacesTaken[currentGame - 1] = 1
+    console.log(currentGame)
+    console.log(bigGamePlacesTaken)
     playingGame = false
     currentGame = null
     placesTaken = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     markersPlaced = 0
     
     checkBigGameWins()
-    localStorage.setItem("board", placesTaken)
 }
 
 function oWonGame() {
@@ -290,8 +325,6 @@ function oWonGame() {
     markersPlaced = 0
 
     checkBigGameWins()
-
-    localStorage.setItem("board", placesTaken)
 }
 
 function checkBigGameWins() {
@@ -413,9 +446,70 @@ function tiedBigGame() {
     winnerOne = 3
 }
 
+function loadPage() {
+    var placesTakenSaved = localStorage.getItem("board")
+
+    if(placesTakenSaved == null) {
+        document.getElementById("main-Menu-Container").style.display = "flex"
+
+    } else if(placesTakenSaved != null){
+        document.getElementById("main-Menu-Container").style.display = "flex"
+        document.getElementById("continue-Game").style.display = "flex"
+        // document.getElementById("whole-Game-Container").style.display = "flex"
+        // document.getElementById("whole-Game-Container").style.opacity = "1"
+    }
+}
+
+function continueGame() {
+    var placesTakenSaved = localStorage.getItem("board")
+    var theActualIndex = 0
+    bigGameMarkersPlaced = 0
+
+    if(placesTakenSaved != null){
+        console.log(placesTakenSaved)
+
+        for(var i=0;i<placesTakenSaved.length;i++) {
+            if(placesTakenSaved[i] != ",") {
+                console.log(placesTakenSaved[i])
+                bigGamePlacesTaken[theActualIndex] = placesTakenSaved[i]
+                boxID = numberWords[theActualIndex]
+                currentGame = theActualIndex + 1
+                if(placesTakenSaved[i] == "1") {
+                    xWonGame()
+                    bigGameMarkersPlaced++
+                } else if(placesTakenSaved[i] == "2") {
+                    oWonGame()
+                    bigGameMarkersPlaced++
+                } else if(placesTakenSaved[i] == "3") {
+                    tiedGame()
+                    bigGameMarkersPlaced++
+                }
+                theActualIndex++
+            }
+        }
+
+        if((bigGameMarkersPlaced / 2) % 2 == 0) {
+            playerOneTurn = false
+        }
+    }
+    
+    document.getElementById("main-Menu-Container").style.transition = ".5s"
+    document.getElementById("main-Menu-Container").style.opacity = "0"
+
+    setTimeout(function() {
+
+        document.getElementById("whole-Game-Container").style.display = "flex"
+        document.getElementById("whole-Game-Container").style.opacity = "1"
+    }, 500)
+}
+
+function showMenu() {
+
+}
 
 // Main
 var boxID = ""
+var numberWords = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight"]
 var placesTaken = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 var markersPlaced = 0
 var currentGame = null
